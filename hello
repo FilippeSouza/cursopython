@@ -1,0 +1,48 @@
+#!/usr/bin/python/env python
+
+
+
+
+
+
+"""Hello world mult linguas.
+teste
+Desta forma vira documentação do programa.
+boas praticas colocar em ingles fica compartivel com o mercado e etc.
+How to use:
+
+Have the varavel lang previsiou config exempla:
+
+    export LANG=pt_BR
+
+Execution
+
+    python3 hello.py
+    or
+    ./hello.py
+
+
+"""
+
+__version__ = "0.0.1"
+__author__ = "Filipe"
+__license__ = "Unlicense"
+
+#Dunder __ identificador
+
+import os
+
+current_language = os.getenv("LANG", "en_US")[:5]
+
+msg = "hello, World!"
+if current_language == "pt_BR":
+    msg = "Ola mundo"
+elif current_language == "it_IT":
+    msg = "Ciao, Mondo!"
+elif current_language == "en_US":
+    msg = "hello"
+elif current_language == "es_SP":
+    msg = "hola, mundo"
+elif current_language == "de_DE":
+    msg = "alemao aqui"
+print(msg)
